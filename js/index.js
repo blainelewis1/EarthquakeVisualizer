@@ -2,7 +2,7 @@ var earthquakes = [];
 var layer;
 var map;
 
-$.get("resources/365d.json", function(data) {
+$.get("http://earthquakescanada.nrcan.gc.ca/api/earthquakes/latest/365d.json", function(data) {
   var dataArray = [];
 
   for (var key in data) {
