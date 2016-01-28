@@ -2,8 +2,8 @@ var earthquakes = [];
 var layer;
 var map;
 
-var earthquakeUrl = "http://earthquakescanada.nrcan.gc.ca/api/earthquakes/latest/365d.json";
-//var earthquakeUrl = "resources/365d.json";
+//var earthquakeUrl = "http://earthquakescanada.nrcan.gc.ca/api/earthquakes/latest/365d.json";
+var earthquakeUrl = "resources/365d.json";
 
 $.get(earthquakeUrl, function(data) {
   var dataArray = [];

@@ -1,11 +1,16 @@
 body { margin:0; padding:0; }
 #map { position:absolute; top:0; bottom:0; width:100%; }
 
+#controls-wrapper {
+  position:absolute;
+  z-index: 9999;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
 #controls {
   background-color: white;
-
-  color:#AAAAAA;
-  font-size: .5em;
 
   width:100%;
   max-width:400px;
@@ -14,15 +19,15 @@ body { margin:0; padding:0; }
   margin: 0 auto;
 }
 
-#controls-wrapper {
-  position:absolute;
-  z-index: 9999;
-  left: 0;
-  right: 0;
+#controls-wrapper .expander {
+  margin:0 auto;
+  width:7em;
 }
 
 #attribution {
   margin-top: 1vh;
+  color:#AAAAAA;
+  font-size: .5em;
 }
 
 .to {
@@ -32,7 +37,7 @@ body { margin:0; padding:0; }
 }
 
 input {
-  width:48%;
+  width:47.5%;
   display:inline-block;
 }
 
