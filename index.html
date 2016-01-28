@@ -1,30 +1,32 @@
 <html>
 <head>
-  <script src="/node_modules/jquery/dist/jquery.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
   <title>Earthquake Visualizer</title>
-
-  <style>
-    #controls {
-      position:absolute;
-      left:100px;
-      z-index: 9999;
-    }
-
-  </style>
 
   <meta charset='utf-8' />
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <script src='https://api.mapbox.com/mapbox.js/v2.2.4/mapbox.js'></script>
   <link href='https://api.mapbox.com/mapbox.js/v2.2.4/mapbox.css' rel='stylesheet' />
+
+  <link href='http://blainelewis1.github.io/assets/style/main.css' rel='stylesheet' />
+
   <style>
     body { margin:0; padding:0; }
     #map { position:absolute; top:0; bottom:0; width:100%; }
+
+    #controls {
+      position:absolute;
+      left:100px;
+      z-index: 9999;
+    }
   </style>
 
   <script src="js/index.js"></script>
 </head>
 <body>
 <div id="map"></div>
+
 <div id="controls">
   <div id="date">
     <input type="date" id="start-date" /><input type="date" id="end-date" />
@@ -32,6 +34,8 @@
   <div id="mag">
     <input type="number" id="min-mag" value="0"/><input type="number" id="max-mag" value="8"/>
   </div>
+
+  <div id="attribution">Contains information licensed under the Open Government Licence – Canada.</div>
 </div>
 
 </body>

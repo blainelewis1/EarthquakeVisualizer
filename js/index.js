@@ -2,7 +2,10 @@ var earthquakes = [];
 var layer;
 var map;
 
-$.get("http://earthquakescanada.nrcan.gc.ca/api/earthquakes/latest/365d.json", function(data) {
+//var earthquakeUrl = "http://earthquakescanada.nrcan.gc.ca/api/earthquakes/latest/365d.json";
+var earthquakeUrl = "resources/365d.json";
+
+$.get(earthquakeUrl, function(data) {
   var dataArray = [];
 
   for (var key in data) {
@@ -20,18 +23,11 @@ $.get("http://earthquakescanada.nrcan.gc.ca/api/earthquakes/latest/365d.json", f
     }
   }
 
-  initMap();
+  updateMarkers();
 });
 
 
 L.mapbox.accessToken = 'pk.eyJ1IjoiYmxhaW5lbGV3aXMxIiwiYSI6ImNpanVodW4xMzBmMHV1bmtnNW8wbjB6NzYifQ.gpU95UlnUDi7RQ-YP3wULw';
-
-function initMap() {
-  map = L.mapbox.map('map', 'mapbox.streets')
-    .setView([54.3950, -116.8092], 8);
-
-  updateMarkers();
-}
 
 function updateMarkers() {
   var minMag = parseInt($("#min-mag").val());
@@ -68,4 +64,7 @@ $(function(){
   $("#max-mag").change(updateMarkers);
   $("#start-date").change(updateMarkers);
   $("#end-date").change(updateMarkers);
+
+  map = L.mapbox.map('map', 'mapbox.streets')
+    .setView([54.3950, -116.8092], 8);
 });
