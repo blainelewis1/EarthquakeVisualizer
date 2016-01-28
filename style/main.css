@@ -1,0 +1,42 @@
+body { margin:0; padding:0; }
+#map { position:absolute; top:0; bottom:0; width:100%; }
+
+#controls {
+  background-color: white;
+
+  color:#AAAAAA;
+  font-size: .5em;
+
+  width:100%;
+  max-width:400px;
+
+  padding: 0.5vh 0.5vw 0.5vh 0.5vw;
+  margin: 0 auto;
+}
+
+#controls-wrapper {
+  position:absolute;
+  z-index: 9999;
+  left: 0;
+  right: 0;
+}
+
+#attribution {
+  margin-top: 1vh;
+}
+
+.to {
+  max-width: 1%;
+  overflow: hidden;
+  color:#000000;
+}
+
+input {
+  width:48%;
+  display:inline-block;
+}
+
+input[type=button] {
+  width:100%;
+  clear:both
+}
