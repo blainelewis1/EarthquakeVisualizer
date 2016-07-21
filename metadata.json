@@ -1,0 +1,6 @@
+{
+    "title" : "Earthquake Visualiser",
+    "summary" : "In an attempt to make myself more familiar with using APIs and other Javascript tecnhologies I created a map showing a live feed of earthquakes in the past year in Canada.",
+    "technologies" : ["mapbox", "Javascript"],
+    "tags" : ["tool"]
+}
